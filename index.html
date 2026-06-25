@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tanushka Shukla — Personal Portfolio. BSc CS Student, Aspiring Developer from Gwalior. View my education, achievements, hobbies, and contact info.">
+  <meta name="keywords" content="Tanushka Shukla, portfolio, BSc CS, student, Gwalior, developer">
+  <meta name="author" content="Tanushka Shukla">
+  <meta property="og:title" content="Tanushka Shukla — Personal Portfolio">
+  <meta property="og:description" content="BSc CS Student & Aspiring Developer from Gwalior. View portfolio, resume, and achievements.">
+  <title>Tanushka Shukla — Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ──────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="navigate('home')" role="button" tabindex="0" aria-label="Go to homepage">
+        ✨ Tanushka
+      </div>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#home"         class="nav-link" data-page="home"         role="menuitem">Home</a></li>
+        <li><a href="#about"        class="nav-link" data-page="about"        role="menuitem">About</a></li>
+        <li><a href="#education"    class="nav-link" data-page="education"    role="menuitem">Education</a></li>
+        <li><a href="#achievements" class="nav-link" data-page="achievements" role="menuitem">Achievements</a></li>
+        <li><a href="#gallery"      class="nav-link" data-page="gallery"      role="menuitem">Gallery</a></li>
+        <li><a href="#hobbies"      class="nav-link" data-page="hobbies"      role="menuitem">Hobbies</a></li>
+        <li><a href="#experience"   class="nav-link" data-page="experience"   role="menuitem">Experience</a></li>
+        <li><a href="#research"     class="nav-link" data-page="research"     role="menuitem">Research</a></li>
+        <li><a href="#contact"      class="nav-link" data-page="contact"      role="menuitem">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-admin-btn" onclick="navigate('resume')" aria-label="View resume">📄 Resume</button>
+        <button class="nav-admin-btn" onclick="navigate('admin')" aria-label="Open admin panel" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15)">⚙️ Admin</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Mobile navigation">
+    <a href="#home"         class="nav-drawer-link" data-page="home">🏠 Home</a>
+    <a href="#about"        class="nav-drawer-link" data-page="about">👤 About</a>
+    <a href="#education"    class="nav-drawer-link" data-page="education">🎓 Education</a>
+    <a href="#achievements" class="nav-drawer-link" data-page="achievements">🏆 Achievements</a>
+    <a href="#gallery"      class="nav-drawer-link" data-page="gallery">🖼️ Gallery</a>
+    <a href="#hobbies"      class="nav-drawer-link" data-page="hobbies">🎯 Hobbies</a>
+    <a href="#experience"   class="nav-drawer-link" data-page="experience">💼 Experience</a>
+    <a href="#research"     class="nav-drawer-link" data-page="research">🔬 Research</a>
+    <a href="#contact"      class="nav-drawer-link" data-page="contact">📩 Contact</a>
+    <a href="#resume"       class="nav-drawer-link" data-page="resume">📄 Resume</a>
+    <a href="#admin"        class="nav-drawer-link" data-page="admin">⚙️ Admin</a>
+  </div>
+
+  <!-- ─── APP SHELL ───────────────────────────────── -->
+  <main id="app" role="main">
+
+    <!-- HOME PAGE -->
+    <div id="page-home" class="page" role="region" aria-label="Home">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="page-about" class="page" role="region" aria-label="About">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- EDUCATION PAGE -->
+    <div id="page-education" class="page" role="region" aria-label="Education">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- ACHIEVEMENTS PAGE -->
+    <div id="page-achievements" class="page" role="region" aria-label="Achievements">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- GALLERY PAGE -->
+    <div id="page-gallery" class="page" role="region" aria-label="Gallery">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- HOBBIES PAGE -->
+    <div id="page-hobbies" class="page" role="region" aria-label="Hobbies">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- EXPERIENCE PAGE -->
+    <div id="page-experience" class="page" role="region" aria-label="Experience">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- RESEARCH PAGE -->
+    <div id="page-research" class="page" role="region" aria-label="Research">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="page-contact" class="page" role="region" aria-label="Contact">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- ADMIN PAGE -->
+    <div id="page-admin" class="page" role="region" aria-label="Admin Panel">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- RESUME PAGE -->
+    <div id="page-resume" class="page" role="region" aria-label="Resume Builder">
+      <!-- Rendered by JS -->
+    </div>
+
+  </main>
+
+  <!-- ─── FOOTER ───────────────────────────────────── -->
+  <footer role="contentinfo">
+    <p>
+      Made with 💜 by <span>Tanushka Shukla</span> · 
+      <span>shukladev558@gmail.com</span> · 
+      <span>Gwalior, MP</span>
+    </p>
+    <p style="margin-top:8px;font-size:0.78rem;opacity:0.5">© 2024 Tanushka Shukla. All rights reserved.</p>
+  </footer>
+
+  <!-- ─── LIGHTBOX ─────────────────────────────────── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Photo lightbox" aria-modal="true">
+    <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close lightbox">✕</button>
+    <img id="lightbox-img" src="" alt="Gallery photo">
+  </div>
+
+  <!-- ─── MAIN MODAL ───────────────────────────────── -->
+  <div class="modal-overlay" id="main-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Add Entry</h3>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close modal">✕</button>
+      </div>
+      <div id="modal-body">
+        <!-- Fields injected by JS -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary" id="modal-save-btn">💾 Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── TOAST CONTAINER ──────────────────────────── -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ─── SCRIPTS ──────────────────────────────────── -->
+  <script src="app.js"></script>
+
+</body>
+</html>

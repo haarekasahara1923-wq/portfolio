@@ -1,0 +1,402 @@
+/* ===================================================
+   RESUME TEMPLATES — Print / PDF Styles
+   Used with window.print() → Save as PDF
+   =================================================== */
+
+/* Hide everything except resume on print */
+@media print {
+  *, *::before, *::after { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+  body { background: white !important; color: black !important; margin: 0 !important; padding: 0 !important; }
+  body::before { display: none !important; }
+
+  #navbar, .nav-drawer, footer, .toast-container,
+  .modal-overlay, .resume-actions, .template-selector,
+  .resume-builder-header, #page-home, #page-about,
+  #page-education, #page-achievements, #page-gallery,
+  #page-hobbies, #page-experience, #page-research,
+  #page-contact, #page-admin, .page-section > *:not(#resume-print-area),
+  .particles { display: none !important; }
+
+  #app { padding-top: 0 !important; }
+  #page-resume { display: block !important; padding: 0 !important; }
+  .resume-preview-wrap { padding: 0 !important; max-width: 100% !important; }
+  #resume-print-area { display: block !important; }
+
+  @page {
+    margin: 0;
+    size: A4;
+  }
+}
+
+/* ─── RESUME SHARED ──────────────────────────────── */
+.resume-doc {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  background: #fff;
+  color: #1a1a1a;
+  min-height: 297mm;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+  border-radius: 12px;
+}
+
+/* ====================================================
+   TEMPLATE 1 — VIOLET GRADIENT
+   Modern split layout, purple header
+   ==================================================== */
+.resume-template-1 {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 297mm;
+}
+
+/* Header spanning full width */
+.rt1-header {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 50%, #a78bfa 100%);
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  color: white;
+}
+
+.rt1-photo {
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.2);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  overflow: hidden;
+}
+.rt1-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+.rt1-header-info { flex: 1; }
+.rt1-name { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 900; margin: 0 0 6px; color: white; }
+.rt1-role { font-size: 1.05rem; opacity: 0.85; margin-bottom: 14px; font-weight: 300; }
+.rt1-contacts { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.82rem; opacity: 0.9; }
+.rt1-contact-item { display: flex; align-items: center; gap: 6px; }
+
+.rt1-signature-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.rt1-signature {
+  height: 56px;
+  max-width: 160px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+.rt1-sig-label { font-size: 0.72rem; opacity: 0.7; letter-spacing: 1px; text-transform: uppercase; color: white; }
+
+/* Left Sidebar */
+.rt1-sidebar {
+  background: #f8f5ff;
+  padding: 32px 24px;
+  border-right: 1px solid #e8e0f8;
+}
+
+.rt1-section-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7c3aed;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #7c3aed;
+}
+
+.rt1-info-item {
+  margin-bottom: 12px;
+  font-size: 0.82rem;
+}
+.rt1-info-key { color: #6b5f8a; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.rt1-info-val { color: #1a1a2e; font-weight: 600; margin-top: 1px; }
+
+.rt1-hobby-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(124,58,237,0.12);
+  color: #5b21b6;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 3px 3px 3px 0;
+}
+
+/* Main Content */
+.rt1-main { padding: 32px 36px; }
+
+.rt1-main-section { margin-bottom: 28px; }
+
+.rt1-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #5b21b6;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #7c3aed;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rt1-entry { margin-bottom: 16px; }
+.rt1-entry-title { font-weight: 700; font-size: 0.9rem; color: #1a1a1a; }
+.rt1-entry-sub { color: #7c3aed; font-size: 0.8rem; font-weight: 500; }
+.rt1-entry-date { font-size: 0.75rem; color: #888; margin-bottom: 4px; }
+.rt1-entry-desc { font-size: 0.82rem; color: #555; line-height: 1.6; }
+
+/* ====================================================
+   TEMPLATE 2 — EXECUTIVE DARK
+   Bold dark with gold accents
+   ==================================================== */
+.resume-template-2 {
+  background: #0f0a1e;
+  color: #f0e8ff;
+  min-height: 297mm;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.rt2-header {
+  background: linear-gradient(135deg, #1a1030 0%, #0f0a1e 100%);
+  border-bottom: 3px solid #f59e0b;
+  padding: 44px 48px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.rt2-header::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 250px; height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%);
+}
+
+.rt2-photo {
+  width: 120px; height: 120px;
+  border-radius: 12px;
+  border: 3px solid #f59e0b;
+  overflow: hidden;
+  background: #1a1030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+.rt2-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.rt2-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #f59e0b;
+  margin-bottom: 6px;
+  line-height: 1.1;
+}
+.rt2-role { font-size: 1rem; color: #a78bfa; letter-spacing: 2px; text-transform: uppercase; font-weight: 300; margin-bottom: 20px; }
+.rt2-contacts { display: flex; gap: 24px; flex-wrap: wrap; }
+.rt2-contact-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: #c4b5fd; }
+
+.rt2-signature-wrap { text-align: center; }
+.rt2-signature { height: 60px; max-width: 160px; object-fit: contain; filter: sepia(1) saturate(2) hue-rotate(0deg) brightness(1.2); }
+.rt2-sig-line { width: 140px; height: 1px; background: #f59e0b; margin: 8px auto; }
+.rt2-sig-label { font-size: 0.7rem; color: #888; letter-spacing: 2px; text-transform: uppercase; }
+
+.rt2-body { display: grid; grid-template-columns: 260px 1fr; }
+
+.rt2-sidebar {
+  background: #110a20;
+  padding: 32px 24px;
+  border-right: 1px solid rgba(245,158,11,0.15);
+}
+
+.rt2-section-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f59e0b;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+.rt2-section-title:first-child { margin-top: 0; }
+
+.rt2-info-item { margin-bottom: 10px; font-size: 0.8rem; }
+.rt2-info-key { color: #6b5f8a; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.rt2-info-val { color: #f0e8ff; font-weight: 500; margin-top: 1px; }
+
+.rt2-hobby-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(245,158,11,0.1);
+  color: #f59e0b;
+  border: 1px solid rgba(245,158,11,0.2);
+  border-radius: 4px;
+  font-size: 0.72rem;
+  margin: 3px 3px 3px 0;
+}
+
+.rt2-main { padding: 32px 36px; background: #0f0a1e; }
+.rt2-main-section { margin-bottom: 28px; }
+.rt2-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f59e0b;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.rt2-main-title::after { content: ''; flex: 1; height: 1px; background: rgba(245,158,11,0.2); }
+
+.rt2-entry { margin-bottom: 16px; padding-left: 16px; border-left: 2px solid rgba(124,58,237,0.3); }
+.rt2-entry-title { font-weight: 600; font-size: 0.88rem; color: #f0e8ff; }
+.rt2-entry-sub { color: #a78bfa; font-size: 0.78rem; }
+.rt2-entry-date { font-size: 0.72rem; color: #f59e0b; margin-bottom: 4px; }
+.rt2-entry-desc { font-size: 0.8rem; color: #8876a8; line-height: 1.6; }
+
+/* ====================================================
+   TEMPLATE 3 — CLASSIC SERIF
+   Elegant editorial style
+   ==================================================== */
+.resume-template-3 {
+  background: #fefefe;
+  color: #1a1a1a;
+  min-height: 297mm;
+  font-family: 'Playfair Display', serif;
+}
+
+.rt3-header {
+  padding: 52px 52px 36px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: start;
+  border-bottom: 3px double #1a1a1a;
+}
+
+.rt3-photo-sig { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.rt3-photo {
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  border: 3px solid #1a1a1a;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+.rt3-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.rt3-signature { height: 50px; max-width: 140px; object-fit: contain; }
+.rt3-sig-line { width: 120px; height: 1px; background: #1a1a1a; margin: 4px auto; }
+.rt3-sig-label { font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: #888; text-align: center; }
+
+.rt3-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 6px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+.rt3-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.rt3-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #555;
+}
+.rt3-contact-item { display: flex; align-items: center; gap: 6px; }
+
+.rt3-body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+  padding: 0 52px 52px;
+  margin-top: 28px;
+}
+
+.rt3-sidebar { padding-right: 28px; border-right: 1px solid #ddd; }
+.rt3-main { padding-left: 28px; }
+
+.rt3-section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 10px;
+  margin-top: 24px;
+}
+.rt3-section-title:first-child { margin-top: 0; }
+
+.rt3-info-item { margin-bottom: 8px; font-family: 'Inter', sans-serif; }
+.rt3-info-key { color: #888; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.rt3-info-val { color: #1a1a1a; font-weight: 600; font-size: 0.82rem; margin-top: 1px; }
+
+.rt3-hobby-tag {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+.rt3-hobby-tag::before { content: '◆ '; font-size: 0.6rem; }
+
+.rt3-main-section { margin-bottom: 24px; }
+.rt3-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.rt3-entry { margin-bottom: 14px; font-family: 'Inter', sans-serif; }
+.rt3-entry-title { font-weight: 700; font-size: 0.88rem; color: #1a1a1a; }
+.rt3-entry-sub { color: #555; font-size: 0.8rem; font-style: italic; }
+.rt3-entry-date { font-size: 0.72rem; color: #888; margin-bottom: 4px; }
+.rt3-entry-desc { font-size: 0.8rem; color: #555; line-height: 1.6; }
+
+/* ─── Shared resume components ───────────────────── */
+.rt-divider { border: none; border-top: 1px solid currentColor; opacity: 0.2; margin: 8px 0; }
+
+/* ─── Print page break ───────────────────────────── */
+.page-break { page-break-before: always; }
