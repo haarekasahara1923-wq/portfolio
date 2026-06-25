@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    { "source": "/admin", "destination": "/#admin", "permanent": false },
+    { "source": "/about", "destination": "/#about", "permanent": false },
+    { "source": "/education", "destination": "/#education", "permanent": false },
+    { "source": "/achievements", "destination": "/#achievements", "permanent": false },
+    { "source": "/gallery", "destination": "/#gallery", "permanent": false },
+    { "source": "/hobbies", "destination": "/#hobbies", "permanent": false },
+    { "source": "/experience", "destination": "/#experience", "permanent": false },
+    { "source": "/research", "destination": "/#research", "permanent": false },
+    { "source": "/contact", "destination": "/#contact", "permanent": false },
+    { "source": "/resume", "destination": "/#resume", "permanent": false }
+  ]
+}
