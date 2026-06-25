@@ -7,28 +7,28 @@
 
 /* ─── CSS Custom Properties ─────────────────────── */
 :root {
-  --primary:        #7c3aed;
-  --primary-dark:   #5b21b6;
-  --primary-light:  #a78bfa;
-  --primary-glow:   #7c3aed44;
-  --accent:         #f59e0b;
-  --accent-light:   #fcd34d;
+  --primary:        #ff7a59;
+  --primary-dark:   #e0533c;
+  --primary-light:  #ffbfa3;
+  --primary-glow:   rgba(255, 122, 89, 0.25);
+  --accent:         #ffd275;
+  --accent-light:   #ffe8b3;
   --rose:           #f43f5e;
   --cyan:           #06b6d4;
   --green:          #10b981;
 
-  --bg:             #0a0614;
-  --bg-2:           #110a20;
-  --bg-3:           #1a1030;
-  --surface:        rgba(124, 58, 237, 0.08);
-  --surface-hover:  rgba(124, 58, 237, 0.15);
+  --bg:             #150d0a;
+  --bg-2:           #1f130e;
+  --bg-3:           #2a1b14;
+  --surface:        rgba(255, 122, 89, 0.08);
+  --surface-hover:  rgba(255, 122, 89, 0.15);
   --glass:          rgba(255, 255, 255, 0.04);
   --glass-border:   rgba(255, 255, 255, 0.10);
   --glass-hover:    rgba(255, 255, 255, 0.08);
 
-  --text:           #f0e8ff;
-  --text-muted:     #a89cc8;
-  --text-dim:       #6b5f8a;
+  --text:           #fff2eb;
+  --text-muted:     #dec5b9;
+  --text-dim:       #94786d;
 
   --radius-sm:      8px;
   --radius:         16px;
@@ -36,7 +36,7 @@
   --radius-xl:      32px;
 
   --shadow:         0 8px 32px rgba(0,0,0,0.4);
-  --shadow-glow:    0 0 40px rgba(124,58,237,0.25);
+  --shadow-glow:    0 0 40px rgba(255, 122, 89, 0.2);
   --shadow-card:    0 4px 24px rgba(0,0,0,0.3);
 
   --transition:     0.3s cubic-bezier(0.4,0,0.2,1);
@@ -69,9 +69,9 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(124,58,237,0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(91,33,182,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(167,139,250,0.05) 0%, transparent 70%);
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(255,122,89,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(224,83,60,0.1) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,191,163,0.05) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -111,7 +111,7 @@ a:hover { color: var(--accent); }
 
 .glass-card:hover {
   background: var(--glass-hover);
-  border-color: rgba(124,58,237,0.3);
+  border-color: rgba(255,122,89,0.3);
   transform: translateY(-4px);
   box-shadow: var(--shadow-glow);
 }
@@ -189,7 +189,7 @@ a:hover { color: var(--accent); }
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-.badge-primary { background: rgba(124,58,237,0.2); color: var(--primary-light); border: 1px solid rgba(124,58,237,0.3); }
+.badge-primary { background: rgba(255,122,89,0.2); color: var(--primary-light); border: 1px solid rgba(255,122,89,0.3); }
 .badge-accent  { background: rgba(245,158,11,0.2); color: var(--accent-light); border: 1px solid rgba(245,158,11,0.3); }
 .badge-rose    { background: rgba(244,63,94,0.2); color: #fda4af; border: 1px solid rgba(244,63,94,0.3); }
 .badge-green   { background: rgba(16,185,129,0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.3); }
@@ -411,7 +411,7 @@ a:hover { color: var(--accent); }
   position: absolute;
   width: 600px; height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,122,89,0.15) 0%, transparent 70%);
   top: -100px; right: -100px;
   animation: floatGlow 8s ease-in-out infinite;
 }
@@ -437,8 +437,8 @@ a:hover { color: var(--accent); }
   gap: 10px;
   padding: 8px 20px;
   border-radius: 50px;
-  background: rgba(124,58,237,0.12);
-  border: 1px solid rgba(124,58,237,0.25);
+  background: rgba(255,122,89,0.12);
+  border: 1px solid rgba(255,122,89,0.25);
   color: var(--primary-light);
   font-size: 0.85rem;
   font-weight: 600;
@@ -819,7 +819,7 @@ a:hover { color: var(--accent); }
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(124,58,237,0.6);
+  background: rgba(255,122,89,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1016,8 +1016,8 @@ a:hover { color: var(--accent); }
 .form-group textarea:focus,
 .form-group select:focus {
   border-color: var(--primary);
-  background: rgba(124,58,237,0.08);
-  box-shadow: 0 0 0 3px rgba(124,58,237,0.1);
+  background: rgba(255,122,89,0.08);
+  box-shadow: 0 0 0 3px rgba(255,122,89,0.1);
 }
 
 .form-group textarea { min-height: 120px; resize: vertical; }
