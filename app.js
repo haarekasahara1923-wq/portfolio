@@ -637,30 +637,37 @@ function renderPasswordGate() {
       <div class="glass-card password-card">
         <span class="password-icon">🔐</span>
         <h2 class="gradient-text">Admin Access</h2>
-        <p>Enter the admin password to manage your portfolio content.</p>
+        <p>Enter the admin credentials to manage your portfolio content.</p>
+        <div class="form-group" style="margin-bottom:12px">
+          <input type="email" id="admin-email-input" placeholder="Enter email..."
+            onkeydown="if(event.key==='Enter')checkAdminPass()">
+        </div>
         <div class="form-group">
           <input type="password" id="admin-pass-input" placeholder="Enter password..."
             onkeydown="if(event.key==='Enter')checkAdminPass()">
         </div>
-        <div class="password-error" id="pass-error">❌ Incorrect password. Please try again.</div>
+        <div class="password-error" id="pass-error">❌ Incorrect email or password. Please try again.</div>
         <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px" onclick="checkAdminPass()">
           🔓 Unlock Admin Panel
         </button>
       </div>
     </div>
   `;
-  setTimeout(() => document.getElementById('admin-pass-input')?.focus(), 100);
+  setTimeout(() => document.getElementById('admin-email-input')?.focus(), 100);
 }
 
 function checkAdminPass() {
-  const val = document.getElementById('admin-pass-input')?.value;
-  if (val === 'tanushka2007') {
+  const email = document.getElementById('admin-email-input')?.value;
+  const pass = document.getElementById('admin-pass-input')?.value;
+  if (email === 'shukladev558@gmail.com' && pass === 'tanushka2007') {
     adminUnlocked = true;
     renderAdminPanel();
     toast('Admin panel unlocked! 🎉');
   } else {
     document.getElementById('pass-error')?.classList.add('show');
-    document.getElementById('admin-pass-input').value = '';
+    if (document.getElementById('admin-pass-input')) {
+      document.getElementById('admin-pass-input').value = '';
+    }
   }
 }
 
